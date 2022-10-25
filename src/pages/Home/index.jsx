@@ -46,7 +46,7 @@ export default function Home() {
                     autoCorrect={false}
                     />
 
-                    <RectButton style={styles.button} onPres={handleNavegationToPoints}>
+                    <RectButton style={styles.button} onPress={handleNavegationToPoints}>
                         <View style={styles.buttonIcon}>
                             <Icon name="arrow-right"color="#FFF"size={24}/>
                         </View>
