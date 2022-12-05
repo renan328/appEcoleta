@@ -12,10 +12,23 @@ import { useNavigation } from "@react-navigation/native";
 //Precisa instalar - expo install react-native-maps
 import MapView, { Marker } from "react-native-maps";
 export default function Points() {
+
+  const navegation = useNavigation();
+
+  // Função para abrir tela de detalhes
+  function handleNavigationToDetail() {
+    navegation.navegate('Detail')
+  }
+
+  // Função para voltar a tela anterior
+  function handleNavigatorBack() {
+    navegation.goBack();
+  }
+
   return (
     <>
       <View style={styles.container}>
-        <TouchableOpacity onPress={() => {}}>
+        <TouchableOpacity onPress={() => { }}>
           <Icon name="arrow-left" size={20} color="#34cb79" />
         </TouchableOpacity>
 
@@ -34,14 +47,14 @@ export default function Points() {
             }}
           >
             <Marker
-              onPress={() => {}}
+              onPress={handleNavigationToDetail}
               coordinate={{ latitude: -23.4460282, longitude: -46.9172153 }}
             >
               <View style={styles.mapMarkerContainer}>
                 <Image
                   style={styles.mapMarkerImage}
                   source={{
-                    url: "https://f.i.uol.com.br/fotografia/2019/08/16/15659855445d570b082fe09_1565985544_3x2_md.jpg",
+                    uri: "https://f.i.uol.com.br/fotografia/2019/08/16/15659855445d570b082fe09_1565985544_3x2_md.jpg",
                   }}
                 />
                 <Text style={styles.mapMarkerTitle}>Centro Histórico</Text>
@@ -55,7 +68,7 @@ export default function Points() {
             showsHorizontalScrollIndicator={false}
             contentContainerStyle={{ paddingHorizontal: 20 }}
           >
-            <TouchableOpacity style={styles.item} onPress={() => {}}>
+            <TouchableOpacity style={styles.item} onPress={() => { }}>
               <Image
                 width={42}
                 height={42}
@@ -63,7 +76,7 @@ export default function Points() {
               />
               <Text style={styles.itemTitle}>Baterias</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.item} onPress={() => {}}>
+            <TouchableOpacity style={styles.item} onPress={() => { }}>
               <Image
                 width={42}
                 height={42}
@@ -71,7 +84,7 @@ export default function Points() {
               />
               <Text style={styles.itemTitle}>Eletrônicos</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.item} onPress={() => {}}>
+            <TouchableOpacity style={styles.item} onPress={() => { }}>
               <Image
                 width={42}
                 height={42}
@@ -79,7 +92,7 @@ export default function Points() {
               />
               <Text style={styles.itemTitle}>Óleo</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.item} onPress={() => {}}>
+            <TouchableOpacity style={styles.item} onPress={() => { }}>
               <Image
                 width={42}
                 height={42}
@@ -87,7 +100,7 @@ export default function Points() {
               />
               <Text style={styles.itemTitle}>Organicos</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.item} onPress={() => {}}>
+            <TouchableOpacity style={styles.item} onPress={() => { }}>
               <Image
                 width={42}
                 height={42}
@@ -104,8 +117,16 @@ export default function Points() {
 
 
 const styles = StyleSheet.create({
-  container: { flex: 1, paddingHorizontal: 32, paddingTop: 20 },
-  title: { fontSize: 20, fontFamily: "Ubuntu_700Bold", marginTop: 24 },
+  container: { 
+    flex: 1, 
+    paddingHorizontal: 32, 
+    paddingTop: 20
+  },
+  title: { 
+    fontSize: 20, 
+    fontFamily: "Ubuntu_700Bold", 
+    marginTop: 24 
+  },
   description: {
     color: "#6C6C80",
     fontSize: 16,
@@ -166,5 +187,5 @@ const styles = StyleSheet.create({
     textAlign: "center",
     fontSize: 13,
   },
-  
+
 });
