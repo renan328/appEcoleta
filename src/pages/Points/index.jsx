@@ -17,7 +17,7 @@ export default function Points() {
 
   // Função para abrir tela de detalhes
   function handleNavigationToDetail() {
-    navegation.navegate('Detail')
+    navegation.navigate('Detail')
   }
 
   // Função para voltar a tela anterior
@@ -28,7 +28,7 @@ export default function Points() {
   return (
     <>
       <View style={styles.container}>
-        <TouchableOpacity onPress={() => { }}>
+        <TouchableOpacity onPress={handleNavigatorBack}>
           <Icon name="arrow-left" size={20} color="#34cb79" />
         </TouchableOpacity>
 

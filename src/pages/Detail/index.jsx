@@ -1,12 +1,12 @@
 import React from 'react';
-import { FeatherasIcon, FontAwesome } from '@expo/vector-icons';
+import { Feather as Icon, FontAwesome } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 import { RectButton } from 'react-native-gesture-handler';
 import { View, Text, TouchableOpacity, StyleSheet, Image, SafeAreaView }
     from 'react-native';
 
 export default function Detail() {
-    constnavigation = useNavigation();
+    const navigation = useNavigation();
         
     //Função para voltar para a tela anterior
 

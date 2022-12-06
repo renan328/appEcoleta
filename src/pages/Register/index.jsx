@@ -4,7 +4,7 @@ import { Feather as Icon } from '@expo/vector-icons';
 import { RectButton } from 'react-native-gesture-handler';
 import { useNavigation } from '@react-navigation/native';
 //Importando o AsyncStorage 
-import AsyncStorage from '@react-native-async-storage/async-storage';
+//import AsyncStorage from '@react-native-async-storage/async-storage';
 
 export default function Register() {
 
@@ -26,7 +26,7 @@ export default function Register() {
     }
 
     //Função que faz o cadastro 
-    async function handleRegister() {
+    /*async function handleRegister() {
 
         let dados = {
             name: nomeUsuario,
@@ -47,7 +47,7 @@ export default function Register() {
             console.log(JSON.parse(data));
         }
         loadData();
-    }, [])
+    }, []) */
 
     return (
         <ImageBackground source={require('../../assets/home-background.png')}
@@ -81,7 +81,7 @@ export default function Register() {
                     autoCorrect={false}
                     secureTextEntry={true}
                 />
-                <RectButton style={styles.button} onPress={handleRegister}>
+                <RectButton style={styles.button} /*onPress={handleRegister}*/>
                     <View style={styles.buttonIcon}>
                         <Icon name="arrow-right" color="#FFF" size={24} />
                     </View>
